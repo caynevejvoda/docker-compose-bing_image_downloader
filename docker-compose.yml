@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  bing:
+    container_name: bing-image-downloader
+    image: msjpq/bing-daily-images:latest
+    restart: always
+    user: ${USER}
+    environment:
+      - TZ
+    volumes:
+      - ./images:/data
